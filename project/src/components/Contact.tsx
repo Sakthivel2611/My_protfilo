@@ -101,19 +101,19 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'sakthivel.r@example.com',
-      link: 'mailto:sakthivel.r@example.com'
+      value: 'sakthivelramesh65@gmail.com',
+      link: 'mailto:sakthivelramesh65@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+91 9876543210',
-      link: 'tel:+919876543210'
+      value: '+91 7339191457',
+      link: 'tel:+917339191457'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'Chennai, Tamil Nadu, India',
+      value: 'Thanjavur, Tamil Nadu, India',
       link: null
     }
   ];
@@ -122,12 +122,12 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
     {
       icon: <Github className="w-6 h-6" />,
       name: 'GitHub',
-      url: 'https://github.com/sakthivel-r'
+      url: 'https://github.com/Sakthivel2611'
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/sakthivel-r'
+      url: 'https://www.linkedin.com/in/sakthivel-ramesh-a03b2229b/'
     }
   ];
 

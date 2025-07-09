@@ -105,7 +105,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
         <div className="absolute bottom-1/3 left-1/3 w-80 h-80 bg-gradient-to-r from-pink-400 to-red-600 rounded-full opacity-10 blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div ref={heroRef} className="container mx-auto px-6 text-center relative z-10">
+      <div ref={heroRef} className="container mx-auto px-6 text-center relative z-10 ">
         <h1 
           ref={titleRef}
           className={`text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r ${
@@ -149,7 +149,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
 
         <div ref={socialsRef} className="flex justify-center space-x-6">
           <a
-            href="https://linkedin.com/in/sakthivel-r"
+            href="https://www.linkedin.com/in/sakthivel-ramesh-a03b2229b/"
             target="_blank"
             rel="noopener noreferrer"
             className={`p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg backdrop-blur-sm ${
@@ -160,7 +160,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           </a>
           
           <a
-            href="https://github.com/sakthivel-r"
+            href="https://github.com/Sakthivel2611"
             target="_blank"
             rel="noopener noreferrer"
             className={`p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg backdrop-blur-sm ${
@@ -171,13 +171,14 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           </a>
           
           <a
-            href="mailto:sakthivel.r@example.com"
+            href="mailto:sakthivelramesh65@gmail.com"
             className={`p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg backdrop-blur-sm ${
               darkMode ? 'bg-white/10 text-white hover:bg-red-600' : 'bg-black/10 text-gray-700 hover:bg-red-600 hover:text-white'
             }`}
           >
             <Mail size={24} />
           </a>
+          
         </div>
       </div>
     </section>

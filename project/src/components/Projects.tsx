@@ -18,7 +18,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       title: 'React Form NPM Package',
       description: 'Dynamic JSON-based form builder with React, TypeScript, Redux, and Styled-components. Enables developers to create complex forms from simple JSON configurations.',
       tech: ['React', 'TypeScript', 'Redux', 'Styled-components'],
-      github: 'https://github.com/sakthivel-r/react-form-package',
+      github: 'https://github.com/Sakthivel2611/dynamic-forms-react-npm_package',
       demo: null,
       image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
@@ -26,7 +26,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       title: 'Client-Specific Data Migration System',
       description: 'Robust data migration system built with Node.js and MongoDB. Features parallel processing, REST APIs, and comprehensive error handling for large-scale data transfers.',
       tech: ['Node.js', 'MongoDB', 'Express.js', 'REST APIs'],
-      github: 'https://github.com/sakthivel-r/data-migration-system',
+      github: 'https://github.com/Sakthivel2611/BACKEND_WORKS',
       demo: null,
       image: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
@@ -34,7 +34,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       title: 'Biometric Attendance System (IoT)',
       description: 'Complete IoT solution for attendance tracking using ESP8266, PHP backend, MySQL database, and responsive web dashboard. Real-time data synchronization and reporting.',
       tech: ['ESP8266', 'PHP', 'MySQL', 'Web Dashboard', 'IoT'],
-      github: 'https://github.com/sakthivel-r/biometric-attendance',
+      github: 'https://github.com/Sakthivel2611/Attendance_system_using_IOT_PHP_MySQL',
       demo: null,
       image: 'https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=800'
     }

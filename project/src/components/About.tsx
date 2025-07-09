@@ -65,7 +65,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
         { name: 'JavaScript', icon: <Code2 className="w-5 h-5" /> },
         { name: 'TypeScript', icon: <Code2 className="w-5 h-5" /> },
         { name: 'C++', icon: <Cpu className="w-5 h-5" /> },
-        { name: 'Python', icon: <Code2 className="w-5 h-5" /> }
+        { name: 'Java', icon: <Code2 className="w-5 h-5" /> }
       ], 
       color: 'orange',
       mainIcon: <Code2 className="w-8 h-8" />

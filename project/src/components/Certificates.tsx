@@ -27,7 +27,6 @@ const Certificates: React.FC<CertificatesProps> = ({ darkMode }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const certificates = [
     {
@@ -98,6 +97,7 @@ const Certificates: React.FC<CertificatesProps> = ({ darkMode }) => {
     }
   ];
 
+  // Animation on scroll
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo('.certificates-title',
@@ -134,27 +134,25 @@ const Certificates: React.FC<CertificatesProps> = ({ darkMode }) => {
     return () => ctx.revert();
   }, []);
 
-  // Auto-play functionality
+  // Auto-play functionality (always enabled, 5 seconds delay)
   useEffect(() => {
-    if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % certificates.length);
-    }, 4000);
+    }, 4500);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, certificates.length]);
+  }, [certificates.length]);
 
   // Smooth slide transition
   useEffect(() => {
-    if (carouselRef.current) {
-      gsap.to(carouselRef.current, {
-        x: -currentSlide * 100 + '%',
-        duration: 0.8,
-        ease: 'power2.out'
-      });
-    }
-  }, [currentSlide]);
+  if (carouselRef.current) {
+    gsap.to(carouselRef.current, {
+      x: `-${currentSlide * (carouselRef.current.offsetWidth / certificates.length)}px`,
+      duration: 0.8,
+      ease: 'power2.out'
+    });
+  }
+}, [currentSlide, certificates.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % certificates.length);
@@ -220,16 +218,6 @@ const Certificates: React.FC<CertificatesProps> = ({ darkMode }) => {
           {/* Carousel Controls */}
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-4">
-              <button
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                  isAutoPlaying 
-                    ? 'bg-green-500 text-white' 
-                    : darkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
-                }`}
-              >
-                {isAutoPlaying ? 'Pause' : 'Play'}
-              </button>
               <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                 {currentSlide + 1} of {certificates.length}
               </span>
@@ -265,7 +253,8 @@ const Certificates: React.FC<CertificatesProps> = ({ darkMode }) => {
               {certificates.map((cert, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-4"
+                  className=" flex-shrink-0 px-4"
+                  // style={{ width: '100%' }}
                   style={{ width: `${100 / certificates.length}%` }}
                 >
                   <div className={`relative overflow-hidden rounded-2xl shadow-2xl backdrop-blur-sm border ${
